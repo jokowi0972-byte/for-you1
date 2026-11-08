@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Favorite Person ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:linear-gradient(135deg,#1b102b,#54205c,#a83279);
+ color:white;font-family:Arial;text-align:center;
+ min-height:100vh;overflow-x:hidden
+}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.heart{position:absolute;bottom:-30px;animation:float 8s linear infinite;opacity:.7}
+@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+.container{padding:30px 18px;max-width:650px;margin:auto}
+h1{color:#ffb6df;text-shadow:0 0 15px #ff40aa}
+.card{background:#ffffff15;border:1px solid #ffffff40;
+ backdrop-filter:blur(10px);padding:25px;border-radius:25px;
+ line-height:1.8;margin-top:25px}
+button{background:#ff69b4;color:white;border:0;padding:15px 25px;
+ border-radius:30px;font-size:16px;margin-top:20px}
+#surprise{display:none;color:#ffd4ee;font-size:23px;margin-top:25px}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts"></div>
+<div class="container">
+<h1>♡ For My Favorite Person ♡</h1>
+<p>sebuah surat kecil untuk seseorang yang spesial 💌</p>
+
+<div class="card">
+<h3>Hai, sayang ❤️</h3>
+<p>
+Aku cuma mau bilang terima kasih karena kamu udah hadir di hidup aku.
+Terima kasih udah jadi bagian dari hari-hari aku,
+udah ngasih aku kebahagiaan, dan bikin banyak hal terasa lebih indah.
+</p>
+<p>
+Aku mungkin nggak selalu bisa ngungkapin semuanya dengan sempurna,
+tapi satu hal yang harus kamu tahu:
+</p>
+<h2 style="color:#ffb6df">Aku sayang banget sama kamu ❤️</h2>
+<p>
+Aku bersyukur bisa kenal kamu, bisa punya kesempatan buat sayang sama kamu,
+dan bisa jalanin hari-hari bareng kamu.
+</p>
+<p>
+Kalau suatu saat kamu ngerasa capek, sedih,
+atau dunia lagi nggak berpihak sama kamu,
+semoga kamu selalu inget kalau ada aku yang dukung kamu.
+</p>
+<p>Makasih udah hadir di hidup aku, ya, cantik 🥹</p>
+<h2>I love you so much ❤️</h2>
+</div>
+
+<button onclick="surprise()">💗 Klik aku 💗</button>
+<div id="surprise">
+Hehehe ❤️<br>
+Kamu adalah salah satu hal terbaik yang pernah hadir di hidup aku.
+<br><br>Love youuu 💕
+</div>
+</div>
+
+<script>
+function surprise(){
+document.getElementById("surprise").style.display="block";
+}
+for(let i=0;i<35;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"%";
+h.style.animationDuration=(5+Math.random()*8)+"s";
+h.style.fontSize=(12+Math.random()*22)+"px";
+document.getElementById("hearts").appendChild(h);
+}
+</script>
+</body>
+</html>
